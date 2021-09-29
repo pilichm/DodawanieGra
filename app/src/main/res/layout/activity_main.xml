@@ -1,18 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_main_background_color"
     tools:context=".MainActivity">
 
+    <RelativeLayout
+        android:id="@+id/rlTimeRemaining"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="@dimen/default_circle_margin"
+        android:layout_marginTop="@dimen/default_circle_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivTimeRemainingBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/circle_small_background_blue"/>
+
+        <TextView
+            android:id="@+id/tvTimeRemaining"
+            android:layout_width="@dimen/circle_small_size"
+            android:layout_height="@dimen/circle_small_size"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/timer_text_size"
+            android:text="@string/mock_time_remaining"/>
+
+    </RelativeLayout>
+
     <TextView
+        android:id="@+id/tvCurrentAddition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="@string/mock_current_addition"
+        android:textSize="@dimen/current_question_text_size"
+        android:textColor="@color/start_button_color"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toRightOf="@id/rlTimeRemaining"
+        app:layout_constraintRight_toLeftOf="@id/rlCorrectIncorrectRatio"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rlCorrectIncorrectRatio"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="@dimen/default_circle_margin"
+        android:layout_marginTop="@dimen/default_circle_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivCorrectIncorrectRatioBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/circle_small_background_blue"/>
+
+        <TextView
+            android:id="@+id/tvCorrectIncorrectRatio"
+            android:textColor="@color/white"
+            android:layout_width="@dimen/circle_small_size"
+            android:layout_height="@dimen/circle_small_size"
+            android:gravity="center"
+            android:textSize="@dimen/timer_text_size"
+            android:text="@string/mock_correct_incorrect_ratio"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlMainButton"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/main_button_margin_top"
+        android:layout_width="@dimen/start_button_Size"
+        android:layout_height="@dimen/start_button_Size"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentAddition"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/tvStart"
+            android:gravity="center"
+            android:visibility="visible"
+            android:background="@color/start_button_color"
+            android:layout_width="@dimen/start_button_Size"
+            android:layout_height="@dimen/start_button_Size"
+            android:text="@string/button_start"
+            android:textColor="@color/white"
+            android:textSize="@dimen/main_button_text_size" />
+
+        <GridLayout
+            android:id="@+id/frAnswers"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="2"
+            android:rowCount="2">
+
+            <TextView
+                android:id="@+id/tvAnswer1"
+                android:gravity="center"
+                android:layout_margin="@dimen/answer_button_margin"
+                android:background="@color/start_button_color"
+                android:layout_width="@dimen/answer_button_Size"
+                android:layout_height="@dimen/answer_button_Size"
+                android:text="@string/mock_number"
+                android:textColor="@color/white"
+                android:textSize="@dimen/main_button_text_size" />
+
+            <TextView
+                android:id="@+id/tvAnswer2"
+                android:gravity="center"
+                android:layout_margin="@dimen/answer_button_margin"
+                android:background="@color/start_button_color"
+                android:layout_width="@dimen/answer_button_Size"
+                android:layout_height="@dimen/answer_button_Size"
+                android:text="@string/mock_number"
+                android:textColor="@color/white"
+                android:textSize="@dimen/main_button_text_size" />
+
+            <TextView
+                android:id="@+id/tvAnswer3"
+                android:gravity="center"
+                android:layout_margin="@dimen/answer_button_margin"
+                android:background="@color/start_button_color"
+                android:layout_width="@dimen/answer_button_Size"
+                android:layout_height="@dimen/answer_button_Size"
+                android:text="@string/mock_number"
+                android:textColor="@color/white"
+                android:textSize="@dimen/main_button_text_size" />
+
+            <TextView
+                android:id="@+id/tvAnswer4"
+                android:gravity="center"
+                android:layout_margin="@dimen/answer_button_margin"
+                android:background="@color/start_button_color"
+                android:layout_width="@dimen/answer_button_Size"
+                android:layout_height="@dimen/answer_button_Size"
+                android:text="@string/mock_number"
+                android:textColor="@color/white"
+                android:textSize="@dimen/main_button_text_size" />
+
+        </GridLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvShowResultDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/main_button_margin_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/current_question_text_size"
+        android:textColor="@color/start_button_color"
+        android:textStyle="bold"
+        android:text="@string/answer_correct"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

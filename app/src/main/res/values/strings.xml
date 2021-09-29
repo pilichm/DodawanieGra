@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">DodawanieGra</string>
+    <string name="mock_time_remaining">12 sec</string>
+    <string name="mock_current_addition">12 + 2</string>
+    <string name="mock_correct_incorrect_ratio">2/5</string>
+    <string name="seconds_suffix">sec</string>
+    <string name="button_start">START</string>
+    <string name="mock_number">12</string>
+    <string name="answer_correct">Correct!</string>
+    <string name="answer_incorrect">Incorrect!</string>
 </resources>

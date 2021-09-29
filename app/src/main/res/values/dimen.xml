@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="circle_small_size">60dp</dimen>
+    <dimen name="circle_large_size">120dp</dimen>
+    <dimen name="default_circle_margin">16sp</dimen>
+    <dimen name="timer_text_size">18sp</dimen>
+    <dimen name="current_question_text_size">32sp</dimen>
+    <dimen name="start_button_Size">300dp</dimen>
+    <dimen name="answer_button_Size">150dp</dimen>
+    <dimen name="main_button_margin_top">128sp</dimen>
+    <dimen name="main_button_text_size">64sp</dimen>
+    <dimen name="answer_button_margin">2dp</dimen>
+</resources>
