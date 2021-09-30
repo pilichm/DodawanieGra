@@ -97,7 +97,7 @@
             android:textSize="@dimen/main_button_text_size" />
 
         <GridLayout
-            android:id="@+id/frAnswers"
+            android:id="@+id/glAnswers"
             android:gravity="center"
             android:visibility="invisible"
             android:layout_width="match_parent"
@@ -107,6 +107,7 @@
 
             <TextView
                 android:id="@+id/tvAnswer1"
+                android:tag="1"
                 android:gravity="center"
                 android:layout_margin="@dimen/answer_button_margin"
                 android:background="@color/start_button_color"
@@ -118,6 +119,7 @@
 
             <TextView
                 android:id="@+id/tvAnswer2"
+                android:tag="2"
                 android:gravity="center"
                 android:layout_margin="@dimen/answer_button_margin"
                 android:background="@color/start_button_color"
@@ -129,6 +131,7 @@
 
             <TextView
                 android:id="@+id/tvAnswer3"
+                android:tag="3"
                 android:gravity="center"
                 android:layout_margin="@dimen/answer_button_margin"
                 android:background="@color/start_button_color"
@@ -140,6 +143,7 @@
 
             <TextView
                 android:id="@+id/tvAnswer4"
+                android:tag="4"
                 android:gravity="center"
                 android:layout_margin="@dimen/answer_button_margin"
                 android:background="@color/start_button_color"
@@ -163,6 +167,7 @@
         android:textSize="@dimen/current_question_text_size"
         android:textColor="@color/start_button_color"
         android:textStyle="bold"
+        android:visibility="invisible"
         android:text="@string/answer_correct"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

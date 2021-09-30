@@ -11,4 +11,6 @@
     <color name="circle_gray">#D3D3D3</color>
     <color name="start_button_color">#003b6f</color>
     <color name="app_main_background_color">#add8e6</color>
+    <color name="incorrect_answer_background">#FF0000</color>
+    <color name="correct_answer_background">#006400</color>
 </resources>
