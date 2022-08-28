@@ -12,7 +12,9 @@ Game of quick calculation of sum of two randomly generated numbers.
 <h3>Used technologies:</h3>
 
 - random number generation,
-- CountDownTimer.
+- CountDownTimer,
+- data binding for finding views in main layout,
+- finding views by tag for game matrix.
 
 <h3>App screenshots:</h3>
 
